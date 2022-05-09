@@ -30,9 +30,5 @@ end
 button = Button.new("Submit", 15, 25, 252525)
 
 def draw_button(button)
-  if is_dark_mode()
-    dark_mode(button)
-  else
-    light_mode(button)
-  end
+  is_dark_mode() ? dark_mode(button) : light_mode(button)
 end
