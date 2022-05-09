@@ -8,5 +8,5 @@
 ## Refactorings
 * Extract Method
 * Remove Flag Argument
-* Introduce Parameter Object
+* Introduce Parameter Object 
 
