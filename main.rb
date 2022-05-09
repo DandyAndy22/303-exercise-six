@@ -7,11 +7,11 @@ class Button
   end
 
   def dim_foreground
-    foreground_color - 10
+    @foreground_color - 10
   end
 
   def brighten_foreground
-    foreground_color + 10
+    @foreground_color + 10
   end
 end
 
@@ -19,22 +19,20 @@ def is_dark_mode
   true
 end
 
-def dark_mode(label_text, x, y, darker_foreground, hex_code)
-  paint(label_text, x, y, darker_foreground, hex_code)
+def dark_mode(button)
+  paint(button.label_text, button.x, button.y, button.dim_foreground, '#111111')
 end
 
 def light_mode(label_text, x, y, lighter_foreground, hex_code)
-  paint(label_text, x, y, lighter_foreground, hex_code)
+  paint(paint(button.label_text, button.x, button.y, button.brighten_foreground, '#E0E0E0'))
 end
 
 button = Button.new("Submit", 15, 25, 252525)
 
 def draw_button(button)
   if is_dark_mode()
-    # darken foreground color for dark mode
-    dark_mode(button.label_text, button.x, button.y, button.dim_foreground, '#111111')
+    dark_mode(button)
   else
-    # lighten foreground color for non-dark mode
-    light_mode(paint(button.label_text, button.x, button.y, button.brighten_foreground, '#E0E0E0'))
+    light_mode(button)
   end
 end
