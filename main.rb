@@ -15,20 +15,14 @@ class Button
   end
 end
 
-def is_dark_mode
-  true
-end
+button = Button.new("Submit", 15, 25, 252525)
 
-def dark_mode(button)
+def draw_dark_mode_button(button)
   paint(button.label_text, button.x, button.y, button.dim_foreground, '#111111')
 end
 
-def light_mode(button)
+def draw_light_mode_button(button)
   paint(button.label_text, button.x, button.y, button.brighten_foreground, '#E0E0E0')
 end
 
-button = Button.new("Submit", 15, 25, 252525)
 
-def draw_button(button)
-  is_dark_mode() ? dark_mode(button) : light_mode(button)
-end

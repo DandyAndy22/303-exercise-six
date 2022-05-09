@@ -3,7 +3,7 @@
 ## Smells
 * Long Parameter List - paint & draw_button both take in five parameters
 * Comments - each conditional has a description
-* Duplicated Code - paint is past nearly identical parameters for both conditions
+* Duplicated Code - paint is passed nearly identical parameters for both conditions
 
 ## Refactorings
 * Extract Method
