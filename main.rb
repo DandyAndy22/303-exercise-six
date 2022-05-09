@@ -23,8 +23,8 @@ def dark_mode(button)
   paint(button.label_text, button.x, button.y, button.dim_foreground, '#111111')
 end
 
-def light_mode(label_text, x, y, lighter_foreground, hex_code)
-  paint(paint(button.label_text, button.x, button.y, button.brighten_foreground, '#E0E0E0'))
+def light_mode(button)
+  paint(button.label_text, button.x, button.y, button.brighten_foreground, '#E0E0E0')
 end
 
 button = Button.new("Submit", 15, 25, 252525)
